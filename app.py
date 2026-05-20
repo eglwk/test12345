@@ -115,25 +115,6 @@ def send():
         return jsonify({"error": str(e)}), 500
 
 
-@app.route("/test_anonymization")
-def test_anonymization():
-    sample = (
-        "Ich heiße Lisa Müller, wohne in Mainz, "
-        "meine Adresse ist Musterstraße 12. "
-        "Ich war mit Paul einkaufen und habe Anna getroffen. "
-        "Mein Freund Max war auch dabei. "
-        "Ich wohne in Bad Kreuznach. "
-        "Meine E-Mail ist lisa@example.com, "
-        "meine Telefonnummer ist 0171 1234567 "
-        "und meine PLZ ist 55116."
-    )
-
-    return jsonify({
-        "original": sample,
-        "anonymized": anonymize_text(sample)
-    })
-
-
 @app.route("/healthz")
 def healthz():
     return "ok", 200
