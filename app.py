@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 
 LLM_API_KEY = os.environ.get("LLM_API_KEY", "").strip()
-LLM_MODEL = os.environ.get("LLM_MODEL", "Qwen3.6 35B").strip()
+LLM_MODEL = os.environ.get("LLM_MODEL", "qwen3.6-35b").strip()
 LLM_API_URL = os.environ.get(
     "LLM_API_URL",
     "https://ki-chat.uni-mainz.de/api/chat/completions"
